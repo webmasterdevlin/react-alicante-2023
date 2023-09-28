@@ -46,3 +46,4 @@ const FormSubmission = ({ handleMutate }: Props) => {
     </form>
   );
 };
+export default FormSubmission;
