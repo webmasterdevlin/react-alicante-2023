@@ -24,17 +24,23 @@ export const useThemeStore = create<ThemeStoreType, any>(
         };
         // without immer
         const setLightTheme = () => {
-          return set(_ => {
-            return {
-              theme: { ...get().theme, isDark: false },
-            };
-          });
+          return set(
+            _ => {
+              return {
+                theme: { ...get().theme, isDark: false },
+              };
+            },
+            false,
+            'setLightTheme',
+          );
         };
         const setDarkTheme = () => {
           return set(
             produce((draft: Draft<ThemeStoreType>) => {
               draft.theme.isDark = true;
             }),
+            false,
+            'setDarkTheme',
           );
         };
         return {
