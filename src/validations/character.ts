@@ -6,3 +6,5 @@ export const CharacterFormSchema = z.object({
   knownAs: z.string().nullable(),
   lastName: z.string().min(2, 'First Name must have at least 2 characters').max(20, 'Too many characters'),
 });
+
+export type CharacterFormSchemaType = z.infer<typeof CharacterFormSchema>;
