@@ -4,7 +4,6 @@ import useAddHero from '../features/heroes/hooks/useAddHero';
 import useFetchHeroes from '../features/heroes/hooks/useFetchHeroes';
 
 const HeroesPage = () => {
-  const queryClient = useQueryClient();
   const { data: response, status } = useFetchHeroes();
 
   const { mutate: addHero } = useAddHero();
