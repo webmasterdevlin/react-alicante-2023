@@ -32,8 +32,7 @@ const NavigationBar = () => {
           })}
         </div>
         <div>
-          <div 
-    className={'mih-50 pre-10 flex flex-row flex-wrap items-center justify-between gap-10'}>
+          <div className={'mih-50 pre-10 flex flex-row flex-wrap items-center justify-between gap-10'}>
             {themeStore.isDark ? (
               <SunIcon className="cursor-pointer" onClick={setLightTheme} />
             ) : (
